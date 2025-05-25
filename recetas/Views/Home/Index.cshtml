@@ -1,0 +1,170 @@
+﻿@model IEnumerable<recetas.Models.Receta>
+
+@{
+    ViewData["Title"] = "Gestión de Recetas";
+}
+
+<div class="mb-8">
+    <div class="flex justify-between items-center mb-6">
+        <h1 class="text-4xl font-bold text-gray-800">
+            <i class="fas fa-book-open text-primary mr-3"></i>
+            Mis Recetas
+        </h1>
+        <a asp-action="Create" class="bg-primary hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors shadow-lg">
+            <i class="fas fa-plus mr-2"></i>Nueva Receta
+        </a>
+    </div>
+
+    <!-- Filtros de búsqueda -->
+    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+        <form method="get" class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Buscar</label>
+                <input type="text" name="searchString" value="@ViewData["searchString"]" 
+                       placeholder="Nombre, descripción o ingredientes..." 
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Categoría</label>
+                <select name="category" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <option value="">Todas las categorías</option>
+                    @foreach (var category in ViewBag.Categories as List<string> ?? new List<string>())
+                    {
+                        <option value="@category" selected="@(ViewData["category"]?.ToString() == category)">@category</option>
+                    }
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Dificultad</label>
+                <select name="difficulty" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <option value="">Todas las dificultades</option>
+                    @foreach (var difficulty in ViewBag.Difficulties as List<string> ?? new List<string>())
+                    {
+                        <option value="@difficulty" selected="@(ViewData["difficulty"]?.ToString() == difficulty)">@difficulty</option>
+                    }
+                </select>
+            </div>
+            <div class="flex items-end">
+                <button type="submit" class="w-full bg-primary hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                    <i class="fas fa-search mr-2"></i>Filtrar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Grid de recetas -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    @foreach (var Receta in Model)
+    {
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="relative">
+                @if (!string.IsNullOrEmpty(Receta.ImageUrl))
+                {
+                    <img src="@Receta.ImageUrl" alt="@Receta.Name" class="w-full h-48 object-cover">
+                }
+                else
+                {
+                    <div class="w-full h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                        <i class="fas fa-utensils text-white text-4xl"></i>
+                    </div>
+                }
+                <button onclick="toggleFavorite(@Receta.Id)" 
+                        class="absolute top-4 right-4 p-2 rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors">
+                    <i class="fas fa-heart @(Receta.IsFavorite ? "text-red-500" : "text-gray-400")" id="heart-@Receta.Id"></i>
+                </button>
+            </div>
+            
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-3">
+                    <h3 class="text-xl font-bold text-gray-800 line-clamp-2">@Receta.Name</h3>
+                    <div class="flex items-center ml-2">
+                        @for (int i = 1; i <= 5; i++)
+                        {
+                            <i class="fas fa-star @(i <= Receta.Rating ? "text-yellow-400" : "text-gray-300") text-sm"></i>
+                        }
+                    </div>
+                </div>
+                
+                <p class="text-gray-600 text-sm mb-4 line-clamp-3">@Receta.Description</p>
+                
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-primary bg-opacity-10 text-primary text-xs font-medium rounded-full">
+                        @Receta.Category
+                    </span>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
+                        @Receta.Difficulty
+                    </span>
+                </div>
+                
+                <div class="flex justify-between items-center text-sm text-gray-500 mb-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-clock mr-1"></i>
+                        @Receta.PreparationTime min
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-users mr-1"></i>
+                        @Receta.Servings porciones
+                    </div>
+                </div>
+                
+                <div class="flex gap-2">
+                    <a asp-action="Details" asp-route-id="@Receta.Id" 
+                       class="flex-1 bg-primary hover:bg-orange-600 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors">
+                        Ver Receta
+                    </a>
+                    <a asp-action="Edit" asp-route-id="@Receta.Id" 
+                       class="bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-4 rounded-lg transition-colors">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@Receta.Id" 
+                       class="bg-red-100 hover:bg-red-200 text-red-700 py-2 px-4 rounded-lg transition-colors">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@if (!Model.Any())
+{
+    <div class="text-center py-16">
+        <i class="fas fa-search text-gray-400 text-6xl mb-4"></i>
+        <h3 class="text-xl font-semibold text-gray-600 mb-2">No se encontraron recetas</h3>
+        <p class="text-gray-500 mb-6">Intenta ajustar tus filtros de búsqueda o crea una nueva receta.</p>
+        <a asp-action="Create" class="bg-primary hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+            <i class="fas fa-plus mr-2"></i>Crear Primera Receta
+        </a>
+    </div>
+}
+
+@section Scripts {
+    <script>
+        async function toggleFavorite(recipeId) {
+            try {
+                const response = await fetch(`/Recipe/ToggleFavorite/${recipeId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value || ''
+                    }
+                });
+                
+                const result = await response.json();
+                if (result.success) {
+                    const heartIcon = document.getElementById(`heart-${recipeId}`);
+                    if (result.isFavorite) {
+                        heartIcon.classList.remove('text-gray-400');
+                        heartIcon.classList.add('text-red-500');
+                    } else {
+                        heartIcon.classList.remove('text-red-500');
+                        heartIcon.classList.add('text-gray-400');
+                    }
+                }
+            } catch (error) {
+                console.error('Error toggling favorite:', error);
+            }
+        }
+    </script>
+}
