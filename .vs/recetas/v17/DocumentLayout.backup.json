@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\recetas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8D6081BC-35B2-48A7-B179-036C6826B46D}|recetas\\recetas.csproj|c:\\users\\user\\source\\repos\\recetas\\recetas\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D6081BC-35B2-48A7-B179-036C6826B46D}|recetas\\recetas.csproj|solutionrelative:recetas\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6081BC-35B2-48A7-B179-036C6826B46D}|recetas\\recetas.csproj|c:\\users\\user\\source\\repos\\recetas\\recetas\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D6081BC-35B2-48A7-B179-036C6826B46D}|recetas\\recetas.csproj|solutionrelative:recetas\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6081BC-35B2-48A7-B179-036C6826B46D}|recetas\\recetas.csproj|c:\\users\\user\\source\\repos\\recetas\\recetas\\views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D6081BC-35B2-48A7-B179-036C6826B46D}|recetas\\recetas.csproj|solutionrelative:recetas\\views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6081BC-35B2-48A7-B179-036C6826B46D}|recetas\\recetas.csproj|c:\\users\\user\\source\\repos\\recetas\\recetas\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8D6081BC-35B2-48A7-B179-036C6826B46D}|recetas\\recetas.csproj|solutionrelative:recetas\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6081BC-35B2-48A7-B179-036C6826B46D}|recetas\\recetas.csproj|c:\\users\\user\\source\\repos\\recetas\\recetas\\controllers\\_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6081BC-35B2-48A7-B179-036C6826B46D}|recetas\\recetas.csproj|solutionrelative:recetas\\controllers\\_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6081BC-35B2-48A7-B179-036C6826B46D}|recetas\\recetas.csproj|c:\\users\\user\\source\\repos\\recetas\\recetas\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8D6081BC-35B2-48A7-B179-036C6826B46D}|recetas\\recetas.csproj|solutionrelative:recetas\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8D6081BC-35B2-48A7-B179-036C6826B46D}|recetas\\recetas.csproj|c:\\users\\user\\source\\repos\\recetas\\recetas\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8D6081BC-35B2-48A7-B179-036C6826B46D}|recetas\\recetas.csproj|solutionrelative:recetas\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -42,11 +66,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "recetas\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "recetas\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAIUAAAAAAAAAAADwv5oAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T02:44:48.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Views\\Home\\Create.cshtml",
+              "RelativeDocumentMoniker": "recetas\\Views\\Home\\Create.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Views\\Home\\Create.cshtml",
+              "RelativeToolTip": "recetas\\Views\\Home\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T02:44:40.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "recetas\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "recetas\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-26T02:42:42.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "recetas\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "recetas\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-26T02:42:37.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_context.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Controllers\\_context.cs",
+              "RelativeDocumentMoniker": "recetas\\Controllers\\_context.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Controllers\\_context.cs",
+              "RelativeToolTip": "recetas\\Controllers\\_context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T02:41:03.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "recetas\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "recetas\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-26T02:35:20.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Views\\Home\\Edit.cshtml",
               "RelativeDocumentMoniker": "recetas\\Views\\Home\\Edit.cshtml",
@@ -59,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "Receta.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Models\\Receta.cs",
               "RelativeDocumentMoniker": "recetas\\Models\\Receta.cs",
@@ -67,12 +169,11 @@
               "RelativeToolTip": "recetas\\Models\\Receta.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAuwCUAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T02:24:31.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T02:24:31.5Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\appsettings.json",
               "RelativeDocumentMoniker": "recetas\\appsettings.json",
@@ -80,12 +181,11 @@
               "RelativeToolTip": "recetas\\appsettings.json",
               "ViewState": "AgIAAAIAAAAAAAAAAAAqwBAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-26T01:56:25.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T01:56:25.647Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "SeedData.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Data\\SeedData.cs",
               "RelativeDocumentMoniker": "recetas\\Data\\SeedData.cs",
@@ -93,12 +193,11 @@
               "RelativeToolTip": "recetas\\Data\\SeedData.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAwDQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T00:09:15.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T00:09:15.738Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\appsettings.Development.json",
               "RelativeDocumentMoniker": "recetas\\appsettings.Development.json",
@@ -106,12 +205,11 @@
               "RelativeToolTip": "recetas\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-26T00:09:32.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T00:09:32.438Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Program.cs",
               "RelativeDocumentMoniker": "recetas\\Program.cs",
@@ -119,12 +217,11 @@
               "RelativeToolTip": "recetas\\Program.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAwCQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T23:19:33.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-25T23:19:33.066Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "RecipeContext.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Data\\RecipeContext.cs",
               "RelativeDocumentMoniker": "recetas\\Data\\RecipeContext.cs",
@@ -132,12 +229,11 @@
               "RelativeToolTip": "recetas\\Data\\RecipeContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T23:15:05.13Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-25T23:15:05.13Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\recetas\\recetas\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "recetas\\Controllers\\HomeController.cs",
@@ -145,8 +241,7 @@
               "RelativeToolTip": "recetas\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAAwE8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T22:51:20.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-25T22:51:20.333Z"
             }
           ]
         }
