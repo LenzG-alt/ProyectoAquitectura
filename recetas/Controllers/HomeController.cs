@@ -41,7 +41,7 @@ namespace recetas.Controllers
             ViewBag.Categories = await _context.Recipes.Select(r => r.Category).Distinct().ToListAsync();
             ViewBag.Difficulties = await _context.Recipes.Select(r => r.Difficulty).Distinct().ToListAsync();
 
-            return View(await recipes.OrderByDescending(r => r.CreatedAt).ToListAsync());
+            return View(await recipes.ToListAsync());
         }
 
         // GET: Recipe/Details/5
@@ -74,12 +74,11 @@ namespace recetas.Controllers
         {
             if (ModelState.IsValid)
             {
-                recipe.CreatedAt = DateTime.Now;
-                _context.Add(recipe);
+                
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(recipe);
+            return View();
         }
 
         // GET: Recipe/Edit/5
@@ -182,7 +181,6 @@ namespace recetas.Controllers
         {
             var favoriteRecipes = await _context.Recipes
                 .Where(r => r.IsFavorite)
-                .OrderByDescending(r => r.CreatedAt)
                 .ToListAsync();
 
             return View(favoriteRecipes);

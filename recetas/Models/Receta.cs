@@ -35,8 +35,6 @@ namespace recetas.Models
 
         public string? ImageUrl { get; set; }
 
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
-
         public bool IsFavorite { get; set; } = false;
 
         [Range(1, 5, ErrorMessage = "La calificación debe estar entre 1 y 5")]

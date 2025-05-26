@@ -7,9 +7,22 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<RecipeContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<RecipeContext>();
+
+    // Aplica migraciones si faltan
+    //context.Database.Migrate();
+
+    // Llama a tu método Seed
+    SeedData.Initialize(context);
+}
 
 // Middleware
 if (!app.Environment.IsDevelopment())
