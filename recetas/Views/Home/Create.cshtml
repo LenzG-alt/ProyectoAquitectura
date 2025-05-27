@@ -1,0 +1,122 @@
+﻿@model recetas.Models.Receta
+
+@{
+    ViewData["Title"] = "Nueva Receta";
+}
+
+<div class="container py-5">
+    <div class="card shadow-lg border-0">
+        <div class="card-body p-5">
+            <div class="text-center mb-4">
+                <h1 class="h2 fw-bold">
+                    <i class="fas fa-plus-circle text-primary me-2"></i> Crear Nueva Receta
+                </h1>
+                <p class="text-muted">Comparte tu receta favorita con la comunidad</p>
+            </div>
+
+            <form asp-action="Create" novalidate>
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger text-center"></div>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label asp-for="Name" class="form-label">Nombre <span class="text-danger">*</span></label>
+                        <input asp-for="Name" class="form-control" placeholder="Ej: Paella Valenciana" />
+                        <span asp-validation-for="Name" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="ImageUrl" class="form-label">URL de Imagen</label>
+                        <input asp-for="ImageUrl" class="form-control" placeholder="https://ejemplo.com/imagen.jpg" />
+                        <span asp-validation-for="ImageUrl" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-12">
+                        <label asp-for="Description" class="form-label">Descripción</label>
+                        <textarea asp-for="Description" class="form-control" rows="3" placeholder="Describe brevemente tu receta..."></textarea>
+                        <span asp-validation-for="Description" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Category" class="form-label">Categoría <span class="text-danger">*</span></label>
+                        <select asp-for="Category" class="form-select">
+                            <option value="">Selecciona una categoría</option>
+                            <option>Desayuno</option>
+                            <option>Almuerzo</option>
+                            <option>Cena</option>
+                            <option>Postre</option>
+                            <option>Aperitivo</option>
+                            <option>Bebida</option>
+                            <option>Plato Principal</option>
+                            <option>Ensalada</option>
+                        </select>
+                        <span asp-validation-for="Category" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Difficulty" class="form-label">Dificultad</label>
+                        <select asp-for="Difficulty" class="form-select">
+                            <option value="">Selecciona la dificultad</option>
+                            <option>Fácil</option>
+                            <option>Intermedio</option>
+                            <option>Difícil</option>
+                        </select>
+                        <span asp-validation-for="Difficulty" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label asp-for="PreparationTime" class="form-label">Tiempo de Preparación (min)</label>
+                        <input asp-for="PreparationTime" type="number" class="form-control" min="1" max="480" />
+                        <span asp-validation-for="PreparationTime" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label asp-for="Servings" class="form-label">Porciones</label>
+                        <input asp-for="Servings" type="number" class="form-control" min="1" max="10" />
+                        <span asp-validation-for="Servings" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label asp-for="Rating" class="form-label">Calificación</label>
+                        <select asp-for="Rating" class="form-select">
+                            <option value="1">⭐ 1 estrella</option>
+                            <option value="2">⭐⭐ 2 estrellas</option>
+                            <option value="3">⭐⭐⭐ 3 estrellas</option>
+                            <option value="4">⭐⭐⭐⭐ 4 estrellas</option>
+                            <option value="5">⭐⭐⭐⭐⭐ 5 estrellas</option>
+                        </select>
+                        <span asp-validation-for="Rating" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-12">
+                        <label asp-for="Ingredients" class="form-label">Ingredientes</label>
+                        <textarea asp-for="Ingredients" class="form-control" rows="4" placeholder="Ej: 2 tazas de arroz, 1 pollo..."></textarea>
+                        <span asp-validation-for="Ingredients" class="text-danger small"></span>
+                        <small class="text-muted">Separa cada ingrediente con una coma</small>
+                    </div>
+
+                    <div class="col-12">
+                        <label asp-for="Instructions" class="form-label">Instrucciones</label>
+                        <textarea asp-for="Instructions" class="form-control" rows="6" placeholder="Paso 1: ..., Paso 2: ..."></textarea>
+                        <span asp-validation-for="Instructions" class="text-danger small"></span>
+                        <small class="text-muted">Escribe cada paso en una línea nueva</small>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center gap-3 mt-5">
+                    <button type="submit" class="btn btn-primary px-4 py-2">
+                        <i class="fas fa-save me-2"></i> Guardar Receta
+                    </button>
+                    <a asp-action="Index" class="btn btn-secondary px-4 py-2">
+                        <i class="fas fa-times me-2"></i> Cancelar
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
