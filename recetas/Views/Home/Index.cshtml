@@ -4,6 +4,10 @@
     ViewData["Title"] = "Gestión de Recetas";
 }
 
+<form id="antiForgeryForm" method="post" asp-controller="Home" asp-action="ToggleFavorite">
+    @Html.AntiForgeryToken()
+</form>
+
 <div class="mb-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1 class="display-5">
@@ -123,11 +127,13 @@
     </div>
 }
 
+
+
 @section Scripts {
     <script>
         async function toggleFavorite(recipeId) {
             try {
-                const response = await fetch(`/Recipe/ToggleFavorite/${recipeId}`, {
+                const response = await fetch(`/Home/ToggleFavorite/${recipeId}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

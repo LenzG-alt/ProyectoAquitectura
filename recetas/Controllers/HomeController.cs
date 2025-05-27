@@ -164,6 +164,7 @@ namespace recetas.Controllers
 
         // POST: Recipe/ToggleFavorite/5
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> ToggleFavorite(int id)
         {
             var recipe = await _context.Recipes.FindAsync(id);
@@ -175,6 +176,7 @@ namespace recetas.Controllers
             }
             return Json(new { success = false });
         }
+
 
         // GET: Recipe/Favorites
         public async Task<IActionResult> Favorites()

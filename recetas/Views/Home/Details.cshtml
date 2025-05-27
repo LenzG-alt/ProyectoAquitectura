@@ -4,7 +4,12 @@
     ViewData["Title"] = Model.Name;
 }
 
+<form id="antiForgeryForm">
+    @Html.AntiForgeryToken()
+</form>
+
 <div class="container my-5">
+
     <div class="card shadow-lg border-0">
         <!-- Imagen de encabezado -->
         @if (!string.IsNullOrEmpty(Model.ImageUrl))
@@ -124,11 +129,14 @@
     <script>
         async function toggleFavorite(recipeId) {
             try {
-                const response = await fetch(`/Recipe/ToggleFavorite/${recipeId}`, {
+                // Obtener el token desde el input generado
+                const token = document.querySelector('#antiForgeryForm input[name="__RequestVerificationToken"]').value;
+
+                const response = await fetch(`/Home/ToggleFavorite/${recipeId}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value || ''
+                        'RequestVerificationToken': token // Aquí va el token
                     }
                 });
 
